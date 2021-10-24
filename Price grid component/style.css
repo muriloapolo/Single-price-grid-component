@@ -1,0 +1,159 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Karla", sans-serif;
+  font-size: 16px;
+  background-color: rgb(231, 231, 209);
+}
+:root {
+  --primary-color-cyan: hsl(179, 62%, 43%);
+  --primary-color-yellow: hsl(71, 73%, 54%);
+  --neutral-light-gray: hsl(204, 43%, 93%);
+  --neutral-light-graysh: hsl(218, 22%, 67%);
+}
+/*## Typography*/
+
+h1 {
+  margin: 40px 0 20px 0;
+  color: var(--primary-color-cyan);
+  font-family: "Karla", sans-serif;
+}
+.sec1 h4 {
+  margin: 15px 0;
+  font-weight: 600;
+  font-size: 18px;
+  color: var(--primary-color-yellow);
+}
+.textSecOne {
+  line-height: 25px;
+  color: var(--primary-color-cyan);
+  margin-bottom: 40px;
+  font-weight: 500;
+}
+h3 {
+  color: #fff;
+  font-weight: 300;
+}
+.sec2 .price {
+  font-size: 1.7rem;
+  font-weight: 500;
+  color: #fff;
+}
+.sec2 p {
+  color: var(--neutral-light-gray);
+  font-weight: 100;
+  font-size: small;
+}
+/*------------------------------------------------------------*/
+.container {
+  margin-top: -50px;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cardContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas:
+    "titulo titulo"
+    "info1 info2" "footer footer";
+
+  width: 700px;
+  height: 400px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.144);
+  box-sizing: border-box;
+  border-radius: 10px;
+}
+
+/*Sec1*/
+.sec1 {
+  padding-left: 40px;
+  background-color: #fff;
+  grid-area: titulo;
+  border-radius: 10px 10px 0 0;
+}
+/*Sec2*/
+.sec2 {
+  padding: 40px;
+  background-color: var(--primary-color-cyan);
+  grid-area: info1;
+  border-bottom-left-radius: 10px;
+}
+
+button {
+  cursor: pointer;
+  background-color: var(--primary-color-yellow);
+  color: #fff;
+  margin-top: 20px;
+  padding: 15px 90px;
+  border: 1px solid rgba(128, 128, 128, 0.247);
+  border-radius: 5px;
+  box-shadow: 1px 10px 15px rgba(0, 0, 0, 0.281);
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+button:active {
+  transform: translateY(1px);
+}
+/*Sec3*/
+.sec3 {
+  grid-area: info2;
+  padding: 40px;
+  background-color: var(--neutral-light-graysh);
+  border-bottom-right-radius: 10px;
+}
+.sec3 h3 {
+  color: #fff;
+}
+.sec3 p {
+  color: #fff;
+  font-weight: 100;
+  color: rgb(219, 223, 224);
+}
+
+/*Footer*/
+.footer {
+  grid-area: footer;
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+/*---------------------mobile----------------------*/
+@media (max-width: 375px) {
+  .cardContainer {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+      "titulo"
+      "info1" "info2" "footer";
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.144);
+    box-sizing: border-box;
+    border-radius: 10px;
+  }
+  .textSecOne {
+    text-align: justify;
+  }
+  button {
+    box-sizing: border-box;
+    width: 250px;
+  }
+  .sec1 {
+    padding: 30px;
+  }
+  .sec2 {
+    border-bottom-left-radius: 0;
+  }
+  .sec3 {
+    border-bottom-left-radius: 10px;
+  }
+}
