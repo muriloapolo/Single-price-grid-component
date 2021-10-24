@@ -128,7 +128,7 @@ button:active {
   color: hsl(228, 45%, 44%);
 }
 /*---------------------mobile----------------------*/
-@media (max-width: 375px) {
+@media (max-width: 394px) {
   .cardContainer {
     display: grid;
     grid-template-columns: 1fr;
